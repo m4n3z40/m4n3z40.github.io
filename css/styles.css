@@ -1,0 +1,412 @@
+/********************************************************
+ * GENERIC CLASSES AND STYLES
+ ********************************************************/
+
+body {
+	background: #33598a url('../img/main-bg.jpg') repeat;
+}
+
+/* Close button */
+.close-button {
+	display: block;
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+	background: #33598a;
+	text-align: center;
+}
+
+.close-button:hover, .close-button:active, .close-button.active {
+	text-decoration: none;
+	background: #4273b3;
+}
+
+.close-button span {
+	color: #fff;
+	font-size: 150%;
+}
+
+/* Main container */
+.main-container {
+	margin-top: 15px;
+}
+
+/* Tests list */
+.tests-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+.tests-list-item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #cccccc;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.tests-list-item .info {
+	flex-grow: 1;
+}
+
+.tests-list-item .info .title {
+	font-size: 140%;
+	font-weight: 700;
+}
+
+.tests-list-item .info .title a {
+	color: #4d7f20;
+	text-decoration: none;
+}
+
+.tests-list-item.disabled .info .title a {
+	color: #8b8a8a;
+}
+
+.tests-list-item.active .info .title a {
+	color: #0096a8;
+}
+
+.tests-list-item .info .title a:hover,
+.tests-list-item .info .title a:active {
+	text-decoration: none;
+	color: #68ab2b;
+}
+
+.tests-list-item.disabled .info .title a:hover,
+.tests-list-item.disabled .info .title a:active {
+	color: #a6a5a5;
+}
+
+.tests-list-item.active .info .title a:hover,
+.tests-list-item.active .info .title a:active {
+	color: #00c4db;
+}
+
+.tests-list-item .info .subtitle {
+	line-height: 100%;
+	font-weight: 500;
+	color: #696969;
+}
+
+.tests-list-item .info .description {
+	font-weight: 200;
+	color: #696969;
+}
+
+.tests-list-item .actions .btn {
+	font-weight: 700;
+	background: #20344e;
+	color: #fff;
+	border: none;
+	font-size: 120%;
+	border-radius: 2px;
+	padding: 8px 60px;
+	outline: none;
+}
+
+.tests-list-item.disabled .actions .btn {
+	background: #626060;
+}
+
+.tests-list-item .actions .btn:hover,
+.tests-list-item .actions .btn:active {
+	background: #2f4d74;
+}
+
+.tests-list-item.disabled .actions .btn:hover,
+.tests-list-item.disabled .actions .btn:active {
+	background: #7e7c7c;
+}
+
+/********************************************************
+ * SECTIONS CLASSES AND STYLES -- HEADER
+ ********************************************************/
+
+ /* Header */
+.main-container .header {
+
+}
+
+/* Header titlebar */
+.main-container .header .titlebar {
+	background: #fff;
+	height: 100px;
+	position: relative;
+}
+
+/* Titlebar logo */
+.main-container .header .titlebar .logo {
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	width: 160px;
+	height: 60px;
+	margin-left: -80px;
+}
+
+/* Titlebar close button */
+.main-container .header .titlebar .close-button {
+	position: absolute;
+	top: 32.5px;
+	right: 32.5px;
+}
+
+/* Header User info */
+.main-container .header .user-info {
+	height: 140px;
+	background: #292929 url('../img/user-info-bg.jpg') repeat;
+	position: relative;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* User info profile */
+.main-container .header .user-info .profile {
+	position: absolute;
+	top: 25px;
+	left: 50%;
+	width: 260px;
+	height: 90px;
+	margin-left: -130px;
+}
+
+/* Profile image */
+.main-container .header .user-info .profile img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 85px;
+	height: 85px;
+	border-radius: 85px;
+}
+
+/* Profile info */
+.main-container .header .user-info .profile .info {
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	margin-left: 10px;
+}
+
+/* Profile info user name */
+.main-container .header .user-info .profile .info .user-name {
+	font-weight: 500;
+	font-size: 120%;
+}
+
+/* Profile info user name */
+.main-container .header .user-info .profile .info .user-email {
+	font-weight: 200;
+}
+
+/* User info edit profile button */
+.main-container .header .user-info .edit-profile-button {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+	border: 2px solid #fff;
+	font-size: 120%;
+	padding: 3px 30px;
+}
+
+.main-container .header .user-info .edit-profile-button:hover, 
+.main-container .header .user-info .edit-profile-button:active,
+.main-container .header .user-info .edit-profile-button.active {
+	background: rgba(51,89,138,0.3);
+}
+
+/* Header main menu */
+.main-container .header .main-menu {
+	background: #292929;
+	text-align: center;
+}
+
+/* Header main menu nav */
+.main-container .header .main-menu ul {
+	margin: 10px 0;
+	display: inline-block;
+}
+
+/* Header main menu nav item */
+.main-container .header .main-menu ul > li {
+	margin-left: 15px;
+	display: inline-block;
+}
+
+.main-container .header .main-menu ul > li:first-child {
+	margin-left: 0;
+}
+
+/* Header main menu nav item link */
+.main-container .header .main-menu ul > li > a {
+	display: block;
+	color: #b8b6b6;
+	border-radius: 2px;
+	padding: 3px 15px;
+	font-size: 120%;
+	text-decoration: none;
+}
+
+.main-container .header .main-menu ul > li > a:hover,
+.main-container .header .main-menu ul > li > a:active,
+.main-container .header .main-menu ul > li.active > a,
+.main-container .header .main-menu ul > li.active > a:hover {
+	background-color: #33598a;
+	color: #fff;
+}
+
+
+/********************************************************
+ * SECTIONS CLASSES AND STYLES -- MAIN
+ ********************************************************/
+
+/* Main */
+.main-container .main {
+	margin-top: 15px;
+}
+
+/* Main header */
+.main-container .main .main-header {
+	background: #fff;
+	padding: 15px 15px 5px;
+	overflow: hidden;
+}
+
+/* Main header search */
+.main-container .main .main-header .search {
+	margin: 15px 0;
+}
+
+.main-container .main .main-header .search input {
+	background: #f6f6f6;
+	border: 1px solid #cccccc;
+	border-radius: 40px;
+}
+
+.main-container .main .main-header .search .btn {
+	background-color: #33598a;
+	background-image: url('../img/search-icon.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 40px;
+	height: 40px;
+	border-radius: 45px;
+	font-size: 0;
+	color: transparent;
+	margin-top: -3.5px;
+	margin-left: 5px;
+	border: none;
+	outline: none;
+}
+
+.main-container .main .main-header .search .btn:hover,
+.main-container .main .main-header .search .btn:active {
+	background-color: #4273b3;
+	outline: none;
+}
+
+/* Main header title */
+.main-container .main .main-header .title {
+	font-size: 140%;
+	font-weight: 700;
+	color: #33598a;
+}
+
+.main-container .main .main-header .title p {
+	margin-bottom: 0;
+}
+
+/* Main content */
+.main-container .main .main-content {
+	background: #f6f6f6;
+	border-top: 1px solid #cccccc;
+	box-shadow: 0 -3px 3px 0 #f6f6f6;
+	padding: 15px 25px 45px;
+}
+
+/********************************************************
+ * SECTIONS CLASSES AND STYLES -- FOOTER
+ ********************************************************/
+
+/* Main footer */
+.main-container .footer {
+ 	margin-top: 15px;
+ 	margin-bottom: 15px;
+ 	background: #20344e;
+ 	padding: 25px 10px;
+ 	color: #fff;
+}
+
+/* Main footer branding */
+.main-container .footer .branding {
+
+}
+
+.main-container .footer .branding img {
+	width: 130px;
+	height: 45px;
+}
+
+.main-container .footer .branding .text {
+	font-size: 90%;
+	margin-top: -45px;
+	padding-left: 140px;
+	margin-bottom: 0;
+}
+
+/* Main footer branding */
+.main-container .footer .social {
+
+}
+
+.main-container .footer .social .text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 90%;
+	margin-bottom: 0;
+}
+
+.main-container .footer .social .buttons {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 0;
+	text-align: right;
+}
+
+.main-container .footer .social .buttons > li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.main-container .footer .social .buttons > li > a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background-color: #142132;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	font-size: 0;
+	color: transparent;
+}
+
+.main-container .footer .social .buttons > li > a:hover,
+.main-container .footer .social .buttons > li > a:active {
+	background-color: #233a57;
+}
+
+.main-container .footer .social .buttons > li > a.facebook {
+	background-image: url('../img/facebook-icon.png');
+}
+
+.main-container .footer .social .buttons > li > a.twitter {
+	background-image: url('../img/twitter-icon.png');
+}
