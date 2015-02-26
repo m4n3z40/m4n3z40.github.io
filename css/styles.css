@@ -130,6 +130,56 @@ body {
 	background: #7e7c7c;
 }
 
+/* Applied filters list */
+.applied-filter-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+.applied-filter-list-item a {
+	color: #33598a;
+	text-decoration: none;
+}
+
+.applied-filter-list-item a:hover, .applied-filter-list-item a:active {
+	color: #4273b3;
+	text-decoration: none;
+}
+
+.applied-filter-list-item .clear {
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	display: inline-block;
+	background: url('../img/remove-filter-icon.png');
+	margin-right: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+	position: relative;
+	width: 22px;
+	height: 22px;
+	margin-right: 10px;
+}
+
+.checkbox input[type="checkbox"]:before {
+	content: ' ';
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	display: block;
+	background: #fff url('../img/checkbox-icon.png');
+}
+
+.checkbox input[type="checkbox"]:checked:before {
+	content: ' ';
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	display: block;
+	background: #fff url('../img/checkbox-checked-icon.png');
+}
+
 /********************************************************
  * SECTIONS CLASSES AND STYLES -- HEADER
  ********************************************************/
@@ -393,6 +443,12 @@ body {
 
 .main-container .main .main-content .filters-container .filter .filter-title.featured {
 	color: #33598a;
+}
+
+.main-container .main .main-content .filters-container .filter .checkbox label {
+	font-weight: 500;
+	color: #696969;
+	line-height: 22px;
 }
 
 /* Results list */
