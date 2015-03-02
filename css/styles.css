@@ -517,6 +517,7 @@ body {
 	vertical-align: middle;
 	font-size: 90%;
 	margin-bottom: 0;
+	max-width: 50%;
 }
 
 .main-container .footer .social .buttons {
