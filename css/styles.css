@@ -1,8 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
+
 /********************************************************
  * GENERIC CLASSES AND STYLES
  ********************************************************/
 
 body {
+	font-family: 'Open Sans', Helvetica, sans-serif;
 	background: #33598a url('../img/main-bg.jpg') repeat;
 }
 
@@ -23,6 +26,7 @@ body {
 
 .close-button span {
 	color: #fff;
+	line-height: 30px;
 	font-size: 150%;
 }
 
@@ -96,12 +100,12 @@ body {
 
 .tests-list-item .info .subtitle, .results-list-item .info .subtitle {
 	line-height: 100%;
-	font-weight: 500;
+	font-weight: 600;
 	color: #696969;
 }
 
 .tests-list-item .info .description {
-	font-weight: 200;
+	font-weight: 400;
 	color: #696969;
 }
 
@@ -251,13 +255,13 @@ body {
 
 /* Profile info user name */
 .main-container .header .user-info .profile .info .user-name {
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 120%;
 }
 
 /* Profile info user name */
 .main-container .header .user-info .profile .info .user-email {
-	font-weight: 200;
+	font-weight: 400;
 }
 
 /* User info edit profile button */
@@ -288,7 +292,6 @@ body {
 /* Header main menu nav */
 .main-container .header .main-menu ul {
 	margin: 10px 0;
-	display: inline-block;
 }
 
 /* Header main menu nav item */
@@ -424,6 +427,11 @@ body {
 	z-index: 1;
 }
 
+/* Filter container close button */
+.main-container .main .main-content .filters-container .close-button {
+	display: none;
+}
+
 /* Filter container sections */
 .main-container .main .main-content .filters-container .filter {
 	padding: 0 25px 15px;
@@ -446,7 +454,7 @@ body {
 }
 
 .main-container .main .main-content .filters-container .filter .checkbox label {
-	font-weight: 500;
+	font-weight: 600;
 	color: #696969;
 	line-height: 22px;
 }
@@ -454,6 +462,11 @@ body {
 /* Results list */
 .main-container .main .main-content .results-list-container {
 	padding: 0 0 45px;
+}
+
+/* open filter button  */
+.main-container .main .main-content .results-list-container .open-filters-button {
+	display: none;
 }
 
 /* Results list container */
@@ -489,7 +502,7 @@ body {
 
 .main-container .footer .branding .text {
 	font-size: 90%;
-	margin-top: -45px;
+	margin-top: -50px;
 	padding-left: 140px;
 	margin-bottom: 0;
 }

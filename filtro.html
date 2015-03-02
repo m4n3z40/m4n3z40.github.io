@@ -10,6 +10,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Main styles file -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Media queries with adjustments for small screens -->
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,6 +76,10 @@
         <!-- /.main-header -->
         <div class="main-content filters-page col-sm-12">
           <aside class="filters-container col-sm-12 col-md-3">
+            <!-- Botão de fechar só aparece em telas pequenas -->
+            <a href="#" class="close-button">
+              <span>x</span>
+            </a>
             <section class="filter checkboxes-filter">
               <h3 class="filter-title featured">Loren Ipsun</h3>
 
@@ -220,6 +226,7 @@
           <!-- /.filters-container -->
 
           <div class="results-list-container col-sm-12 col-md-9">
+            <a href="#" class="open-filters-button"><span class="glyphicon glyphicon-filter"></span></a>
             <h3 class="results-title">Loren Ipsun</h3>
             <ul class="results-list">
               <li class="results-list-item">
@@ -273,14 +280,14 @@
       <!-- /.main -->
 
       <footer class="footer row">
-        <div class="branding col-md-6 col-sm-12">
+        <div class="branding col-md-5 col-sm-12">
           <img src="http://placehold.it/130x45" alt="Brand logo">
           <p class="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed pellentesque odio, ac finibus odio.
           </p>
         </div>
         <!-- /.branding -->
-        <div class="social col-md-6 col-sm-12">
+        <div class="social col-md-offset-2 col-md-5 col-sm-12">
           <p class="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
