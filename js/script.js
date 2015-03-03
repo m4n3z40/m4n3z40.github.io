@@ -2,6 +2,7 @@
 	var $filtersPanel = $('.filters-container'),
 		$filtersPanelCloseButton = $filtersPanel.find('.close-button'),
 		$openFiltersButton = $('.results-list-container').find('.open-filters-button'),
+		panelOpenedByUserInteraction = false,
 		resizeTimer;
 
 	/**
@@ -29,12 +30,14 @@
 			e.preventDefault();
 
 			hideFiltersPanel();
+			panelOpenedByUserInteraction = false;
 		});
 
 		$openFiltersButton.on('click', function(e) {
 			e.preventDefault();
 
 			showFiltersPanel();
+			panelOpenedByUserInteraction = true;
 		});
 
 		//Se for tela pequena, iniciar com filtro fechado
@@ -49,13 +52,15 @@
 	function applyResponsiveAdjustments() {
 		if ($(global).width() > 991) {
 			showFiltersPanel();
+		} else if (!panelOpenedByUserInteraction) {
+			hideFiltersPanel();
 		}
 	}
 
 	$(global).on('resize', function() {
 		if (resizeTimer) clearTimeout(resizeTimer);
 
-		resizeTimer = setTimeout(applyResponsiveAdjustments, 200);
+		resizeTimer = setTimeout(applyResponsiveAdjustments, 250);
 	});
 
 	applyResponsiveFiltersExperience();
