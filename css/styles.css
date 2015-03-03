@@ -436,7 +436,6 @@ body {
 .main-container .main .main-content .filters-container .filter {
 	padding: 0 25px 15px;
 	border-bottom: 1px solid #cccccc;
-	position: relative;
 }
 
 .main-container .main .main-content .filters-container .filter:last-child {
