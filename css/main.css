@@ -217,6 +217,7 @@ header.cover .content p {
 
 .research-quality img {
 	width: 100%;
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
@@ -229,26 +230,21 @@ header.cover .content p {
 /* ==========================================================================
    Services
    ========================================================================== */
+
 .services-images img {
 	width: 100%;
+	height: auto;
 }
 
 @media (min-width: 990px) {
-
 	.services-images {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
 	}
 
-	.services-images img {
-		-webkit-box-flex: 1;
-		-webkit-flex: 1;
-		    -ms-flex: 1;
-		        flex: 1;
+	.services-images .image {
+		flex: 1;
+		overflow: hidden;
 	}
-
 }
 
 .services {
