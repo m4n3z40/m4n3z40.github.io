@@ -1,0 +1,399 @@
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?69671319');
+  src: url('../fonts/fontello.eot?69671319#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?69671319') format('woff'),
+       url('../fonts/fontello.ttf?69671319') format('truetype'),
+       url('../fonts/fontello.svg?69671319#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.svg?69671319#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-facebook-circled:before { content: '\e800'; } /* '' */
+.icon-twitter-circled:before { content: '\e801'; } /* '' */
+.icon-linkedin-circled:before { content: '\e802'; } /* '' */
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+body>.navbar {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+body>.navbar .navbar-brand {
+	padding: 0;
+}
+
+body>.navbar .navbar-brand img {
+	height: 50px;
+}
+
+body>.navbar ul {
+	background: #fff;
+}
+
+body>.navbar a {
+	border-bottom: 4px solid #fff;
+	color: #929aa5;
+	text-transform: uppercase;
+}
+
+body>.navbar a:hover, body>.navbar a.active {
+	color: #34495e;
+	border-bottom: 4px solid #34495e;
+}
+
+@media (min-width: 990px) {
+	#main-menu {
+		margin-top: 30px;
+	}
+
+	body>.navbar a {
+		padding: 0 15px;
+	}
+}
+
+
+/* ==========================================================================
+   COVER
+   ========================================================================== */
+
+header.cover {
+	height: 740px;
+	background-image: url("../img/cover.jpg");
+	background-size: cover;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+header.cover .content {
+	color: #fff;
+	text-align: center;
+}
+
+header.cover .content h1 {
+	margin: 0 0 40px;
+}
+
+header.cover .content p {
+	font-size: 130%;
+}
+
+/* ==========================================================================
+   HISTORY
+   ========================================================================== */
+
+.our-history {
+	background-color: #07c19d;
+	color: #fff;
+}
+
+.our-history .row {
+	padding-top: 80px
+}
+
+.our-history .content h3, .our-history .content p {
+	margin-bottom: 30px;
+}
+
+.our-history img {
+	width: 100%;
+}
+
+/* ==========================================================================
+   Mission, Visio & Values
+   ========================================================================== */
+
+.mission-vision-values {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.mission-vision-values header {
+	text-align: center;
+}
+
+.mission-vision-values header h3 {
+	color: #454545;
+	margin-bottom: 30px;
+}
+
+.mission-vision-values .items > div {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.mission-vision-values .items figure, .mission-vision-values .items img {
+	margin-bottom: 15px;
+}
+
+.mission-vision-values .items figcaption {
+	color: #254daa;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.mission-vision-values .items p {
+	color: #454545;
+}
+
+.mission-vision-values .separator {
+	display: inline-block;
+	border-bottom: 1px solid #454545;
+	width: 120px;
+	margin-bottom: 70px;
+}
+
+/* ==========================================================================
+   Research Quality
+   ========================================================================== */
+
+.research-quality {
+	background-color: #254daa;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #fff;
+}
+
+.research-quality img {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.research-quality .content h3, 
+.research-quality .content p, 
+.research-quality .content ul {
+	margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Services
+   ========================================================================== */
+.services-images img {
+	width: 100%;
+}
+
+@media (min-width: 990px) {
+
+	.services-images {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.services-images img {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+	}
+
+}
+
+.services {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.services .row > div {
+	margin-bottom: 30px;
+}
+
+.services h3 {
+	font-size: 120%;
+	font-weight: bold;
+	color: #254daa;
+	margin-bottom: 30px;
+}
+
+.services p {
+	color: #656565;
+}
+
+/* ==========================================================================
+   Quality control
+   ========================================================================== */
+
+.quality-control {
+	background-color: #70cff3;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #fff;
+}
+
+.quality-control .content h3, .quality-control .content p {
+	margin-bottom: 30px;
+}
+
+.quality-control img {
+	width: 100%;
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact {
+	background-color: #33495c;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #fff;
+}
+
+.contact header {
+	text-align: center;
+}
+
+.contact h3 {
+	margin-bottom: 15px;
+}
+
+.contact .separator {
+	width: 120px;
+	border-bottom: 1px solid #fff;
+	display: inline-block;
+	margin-bottom: 70px;
+}
+
+.contact .form-group {
+	margin-bottom: 30px;
+}
+
+.contact label {
+	margin-bottom: 15px;
+	font-weight: normal;
+}
+
+.contact input, .contact textarea {
+	padding: 15px 25px;
+	background: transparent;
+	color: #fff;
+	border: 1px solid #9ba6ae;
+	border-radius: 0;
+}
+
+.contact .actions {
+	text-align: center;
+	margin-top: 70px;
+}
+
+.contact .actions button {
+	text-transform: uppercase;
+	width: 160px;
+	color: #344c5d;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+body > footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+body > footer .row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+body > footer p {
+	color: #c2c2c2;
+}
+
+body > footer .nav-pills li {
+
+}
+
+body > footer .nav-pills a {
+	padding: 0;
+	border-radius: 100px;
+	font-size: 200%;
+}
+
+body > footer .nav-pills a:hover {
+	background: none;
+}
+
+body > footer .nav-pills a span {
+	color: #c2c2c2;
+}
+
+body > footer .nav-pills a:hover span {
+	color: #334c60;
+}
+
+/* ==========================================================================
+   OTHERS
+   ========================================================================== */
+
+#location-map {
+	height: 495px;
+}
