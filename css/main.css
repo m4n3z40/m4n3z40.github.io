@@ -165,6 +165,7 @@ header.cover {
 	height: 740px;
 	background-image: url("../img/cover.jpg");
 	background-size: cover;
+    background-position: center;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
