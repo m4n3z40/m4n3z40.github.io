@@ -118,8 +118,9 @@ body {
    HEADER
    ========================================================================== */
 body>.navbar {
-	margin-bottom: 0;
+    margin-bottom: 0;
 	border-bottom: none;
+    background: #fff;
 }
 
 body>.navbar .navbar-brand {
