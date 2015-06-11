@@ -164,6 +164,7 @@ body>.navbar a:hover, body>.navbar a.active {
 
 header.cover {
 	height: 740px;
+    position: relative;
 	background-image: url("../img/cover.jpg");
 	background-size: cover;
     background-position: center;
@@ -181,9 +182,21 @@ header.cover {
 	        justify-content: center;
 }
 
+header.cover::before {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
 header.cover .content {
 	color: #fff;
 	text-align: center;
+    z-index: 2;
 }
 
 header.cover .content h1 {
@@ -302,17 +315,6 @@ header.cover .content p {
 	height: auto;
 }
 
-@media (min-width: 990px) {
-	.services-images {
-		display: flex;
-	}
-
-	.services-images .image {
-		flex: 1;
-		overflow: hidden;
-	}
-}
-
 .services {
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -332,6 +334,28 @@ header.cover .content p {
 .services p {
 	color: #656565;
 }
+
+@media (min-width: 990px) {
+	.services-images {
+		display: flex;
+	}
+
+	.services-images .image {
+		flex: 1;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 989px) {
+    .services-images .image:first-child {
+        display: none;
+    }
+
+    .services .row > div:nth-child(3) {
+        clear: left;
+    }
+}
+
 
 /* ==========================================================================
    Quality control
