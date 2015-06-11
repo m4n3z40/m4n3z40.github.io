@@ -6,6 +6,23 @@
         longitude: -46.6413542
     };
 
+    function addTranslucidClassAtPosition(position, cls) {
+        var offsetTop = this.offset().top,
+            isTranslucid = this.hasClass(cls);
+
+        if (offsetTop >= position && !isTranslucid) {
+            this.addClass(cls);
+        } else if (offsetTop < position && isTranslucid) {
+            this.removeClass(cls);
+        }
+    }
+
+    function translucidScrollingHeader(header) {
+        var $header = $(header);
+
+        $(root).scroll(addTranslucidClassAtPosition.bind($header, $header.height(), 'translucid'));
+    }
+
     function initializeLocationMap(gMaps) {
     	var mapOptions = {
 	    		center: new gMaps.LatLng(position.latitude, position.longitude),
@@ -47,5 +64,7 @@
 
         addAddresInfoWindow(gMaps, locationMap, placeMarker);
     });
+
+    translucidScrollingHeader(doc.getElementById('mainNavBar'));
 
 })(window, document);

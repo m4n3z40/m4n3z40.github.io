@@ -62,6 +62,7 @@
 
 body {
     font-family: 'Proxima Nova', 'Helvetica Neue', sans-serif;
+    padding-top: 54px;
 }
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
@@ -121,6 +122,10 @@ body>.navbar {
     margin-bottom: 0;
 	border-bottom: none;
     background: #fff;
+}
+
+body>.navbar.translucid {
+    opacity: .9;
 }
 
 body>.navbar .navbar-brand {
@@ -310,9 +315,17 @@ header.cover .content p {
    Services
    ========================================================================== */
 
-.services-images img {
-	width: 100%;
-	height: auto;
+.services-images {
+   display: flex;
+}
+
+.services-images .image {
+   flex: 1;
+   overflow: hidden;
+   background-image: url('../img/services.jpg');
+   background-position: center center;
+   background-size: cover;
+   height: 474px;
 }
 
 .services {
@@ -335,22 +348,7 @@ header.cover .content p {
 	color: #656565;
 }
 
-@media (min-width: 990px) {
-	.services-images {
-		display: flex;
-	}
-
-	.services-images .image {
-		flex: 1;
-		overflow: hidden;
-	}
-}
-
 @media (max-width: 989px) {
-    .services-images .image:first-child {
-        display: none;
-    }
-
     .services .row > div:nth-child(3) {
         clear: left;
     }
