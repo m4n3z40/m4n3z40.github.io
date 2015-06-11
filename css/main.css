@@ -62,6 +62,7 @@
 
 body {
     font-family: 'Proxima Nova', 'Helvetica Neue', sans-serif;
+    position: relative;
     padding-top: 54px;
 }
 
@@ -147,7 +148,16 @@ body>.navbar a {
     font-weight: bold;
 }
 
-body>.navbar a:hover, body>.navbar a.active {
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus
+
+body>.navbar a:hover,
+body>.navbar .navbar-nav>.active>a,
+body>.navbar .navbar-nav>.active>a:hover,
+body>.navbar .navbar-nav>.active>a:focus {
+    background: none;
+    filter: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 	color: #34495e;
 	border-bottom: 4px solid #34495e;
 }
